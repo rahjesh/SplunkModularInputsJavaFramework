@@ -1,4 +1,4 @@
-## Splunk JMS Modular Input v1.5.1
+## Splunk JMS Modular Input v1.6
 
 ## Overview
 
@@ -27,6 +27,10 @@ You can then supply messaging provider specific jar files at runtime.
 * Optionally set your JAVA_HOME environment variable to the root directory of you JRE installation.If you don't set this , the input will look for a default installed java executable on the path.
 * Untar the release to your $SPLUNK_HOME/etc/apps directory
 * Restart Splunk
+
+## Activation Key
+
+You require an activation key to use this App. Visit http://www.baboonbones.com/#activation  to obtain a free,non-expiring key
 
 ## Configuration
 
@@ -84,7 +88,7 @@ This project was initiated by Damien Dallimore
 
 <tr>
 <td><em>Email</em></td>
-<td>ddallimore@splunk.com</td>
+<td>damien@baboonbones.com</td>
 </tr>
 
 <tr>

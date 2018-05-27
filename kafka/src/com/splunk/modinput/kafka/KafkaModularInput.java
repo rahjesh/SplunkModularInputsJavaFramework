@@ -88,6 +88,8 @@ public class KafkaModularInput extends ModularInput {
 		String additionalConnectionProps = "";
 		String messageHandlerImpl = DEFAULT_MESSAGE_HANDLER;
 		String messageHandlerParams = "";
+		
+		String activationKey = "";
 
 		Transport transport = getTransportInstance(params,stanzaName);
 		
@@ -96,8 +98,10 @@ public class KafkaModularInput extends ModularInput {
 			if (value == null) {
 				continue;
 			}
-
-			if (param.getName().equals("topic_name")) {
+			if (param.getName().equals("activation_key")) {
+				activationKey = param.getValue();
+			}
+			else if (param.getName().equals("topic_name")) {
 				topicName = param.getValue();
 			} else if (param.getName().equals("zookeeper_connect_host")) {
 				zkhost = param.getValue();
@@ -144,6 +148,10 @@ public class KafkaModularInput extends ModularInput {
 				setJVMSystemProperties(param.getValue());
 			}
 
+		}
+		
+		if(!activationKeyCheck(activationKey,"Kafka Messaging Modular Input")){
+			System.exit(2);
 		}
 
 		if (!isDisabled(stanzaName)) {
@@ -417,6 +425,14 @@ public class KafkaModularInput extends ModularInput {
 
 		endpoint.addArg(arg);
 
+		arg = new Arg();
+		arg.setName("activation_key");
+		arg.setTitle("Activation Key");
+		arg.setDescription("Visit http://www.baboonbones.com/#activation  to obtain a free,non-expiring key");
+		arg.setRequired_on_create(true);
+		arg.setRequired_on_edit(true);
+		endpoint.addArg(arg);
+		
 		arg = new Arg();
 		arg.setName("topic_name");
 		arg.setTitle("Topic Name");

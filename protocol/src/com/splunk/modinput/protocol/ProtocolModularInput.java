@@ -80,6 +80,8 @@ public class ProtocolModularInput extends ModularInput {
 		setModsDirectory();
 		// run vertx container in embedded mode
 		PlatformManager pm = PlatformLocator.factory.createPlatformManager();
+		
+		String activationKey = "";
 
 		if (input != null) {
 
@@ -91,6 +93,13 @@ public class ProtocolModularInput extends ModularInput {
 
 					JsonObject config = stanzaToJson(stanza);
 
+					if (config.containsField("activation_key")) {
+						activationKey = config.getString("activation_key");
+					}
+					if(!activationKeyCheck(activationKey,"Protocol Data Inputs")){
+						System.exit(2);
+					}
+					
 					if (!config.containsField("protocol")) {
 						logger.error("No Protocol defined");
 						System.exit(2);
@@ -455,6 +464,14 @@ public class ProtocolModularInput extends ModularInput {
 		arg.setTitle("Stanza Name");
 		arg.setDescription("");
 
+		endpoint.addArg(arg);
+		
+		arg = new Arg();
+		arg.setName("activation_key");
+		arg.setTitle("Activation Key");
+		arg.setDescription("Visit http://www.baboonbones.com/#activation  to obtain a free,non-expiring key");
+		arg.setRequired_on_create(true);
+		arg.setRequired_on_edit(true);
 		endpoint.addArg(arg);
 
 		arg = new Arg();

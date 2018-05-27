@@ -1,5 +1,8 @@
 [alexa://name]
 
+# You require an activation key to use this App. Visit http://www.baboonbones.com/#activation  to obtain a free,non-expiring key
+activation_key = <value>
+
 #defaults to 443, only 443 is supported at present, so changing this has no effect.
 https_port = <value>
 

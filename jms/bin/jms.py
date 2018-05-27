@@ -1,9 +1,6 @@
 '''
 Wrapper Script for the JMS Modular Input
 
-Copyright (C) 2012 Splunk, Inc.
-All Rights Reserved
-
 Because Splunk can't directly invoke Java , we use this python wrapper script that
 simply proxys through to the Java program
 '''

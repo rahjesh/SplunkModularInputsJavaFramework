@@ -85,6 +85,7 @@ public class JMXModularInput extends ModularInput {
 				String name = stanza.getName();
 				String configFile = "config.xml";// default
 				int frequency = 60; // default seconds
+				String activationKey = "";
 
 				if (name != null) {
 
@@ -99,7 +100,10 @@ public class JMXModularInput extends ModularInput {
 						if (value == null || value.length() == 0) {
 							continue;
 						}
-						if (param.getName().equals("config_file")) {
+						if (param.getName().equals("activation_key")) {
+							activationKey = param.getValue();
+						}
+						else if (param.getName().equals("config_file")) {
 
 							configFile = value;
 
@@ -126,6 +130,10 @@ public class JMXModularInput extends ModularInput {
 						}
 
 					}
+					if(!activationKeyCheck(activationKey,"Monitoring of Java Virtual Machines with JMX")){
+						System.exit(2);
+					}
+					
 					new JMXExecutionThread(configFile, frequency, name,transport).start();
 
 				}
@@ -259,6 +267,14 @@ public class JMXModularInput extends ModularInput {
 		arg.setName("name");
 		arg.setTitle("JMX Input Name");
 		arg.setDescription("Name of the JMX input");
+		endpoint.addArg(arg);
+		
+		arg = new Arg();
+		arg.setName("activation_key");
+		arg.setTitle("Activation Key");
+		arg.setDescription("Visit http://www.baboonbones.com/#activation  to obtain a free,non-expiring key");
+		arg.setRequired_on_create(true);
+		arg.setRequired_on_edit(true);
 		endpoint.addArg(arg);
 
 		arg = new Arg();

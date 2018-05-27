@@ -1,3 +1,14 @@
+1.5
+-----
+Added an activation key requirement , visit http://www.baboonbones.com/#activation  to obtain a free,non-expiring key
+Docs updated
+Splunk 7.1 compatible
+
+1.4
+---
+Updated some jars.
+Added CORS supported to HTTP protocol.
+
 1.3
 ---
 Added the latest jython jar to the main classpath because the jython language module that

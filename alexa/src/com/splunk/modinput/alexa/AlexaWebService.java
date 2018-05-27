@@ -481,6 +481,7 @@ public class AlexaWebService extends ModularInput {
 		String disableRequestSignatureCheck = "false";
 		String supportedApplicationIds = "";
 		int timestampTolerance = 150;
+		String activationKey = "";
 
 		for (Param param : params) {
 			String value = param.getValue();
@@ -488,7 +489,10 @@ public class AlexaWebService extends ModularInput {
 				continue;
 			}
 
-			if (param.getName().equals("https_scheme")) {
+			if (param.getName().equals("activation_key")) {
+				activationKey = param.getValue();
+			} 
+			else if (param.getName().equals("https_scheme")) {
 				httpsScheme = param.getValue();
 
 			} else if (param.getName().equals("https_port")) {
@@ -528,6 +532,10 @@ public class AlexaWebService extends ModularInput {
 					logger.error("Can't determine timestampTolerance value, will revert to default value.");
 				}
 			}
+		}
+		
+		if(!activationKeyCheck(activationKey,"Talk to Splunk with Amazon Alexa")){
+			System.exit(2);
 		}
 
 		if (!isDisabled(stanzaName)) {
@@ -667,6 +675,14 @@ public class AlexaWebService extends ModularInput {
 		arg.setTitle("Stanza Name");
 		arg.setDescription("");
 
+		endpoint.addArg(arg);
+		
+		arg = new Arg();
+		arg.setName("activation_key");
+		arg.setTitle("Activation Key");
+		arg.setDescription("Visit http://www.baboonbones.com/#activation  to obtain a free,non-expiring key");
+		arg.setRequired_on_create(true);
+		arg.setRequired_on_edit(true);
 		endpoint.addArg(arg);
 
 		arg = new Arg();

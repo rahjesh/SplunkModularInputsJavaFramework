@@ -90,6 +90,8 @@ public class AMQPModularInput extends ModularInput {
 		boolean indexMessagePropertys = false;
 		String messageHandlerImpl = DEFAULT_MESSAGE_HANDLER;
 		String messageHandlerParams = "";
+		
+		String activationKey = "";
 
 		Transport transport = getTransportInstance(params,stanzaName);
 		
@@ -98,8 +100,10 @@ public class AMQPModularInput extends ModularInput {
 			if (value == null) {
 				continue;
 			}
-
-			if (param.getName().equals("queue_name")) {
+			if (param.getName().equals("activation_key")) {
+				activationKey = param.getValue();
+			}
+			else if (param.getName().equals("queue_name")) {
 				queueName = param.getValue();
 			} else if (param.getName().equals("hostname")) {
 				host = param.getValue();
@@ -164,6 +168,10 @@ public class AMQPModularInput extends ModularInput {
 
 		}
 
+		if(!activationKeyCheck(activationKey,"AMQP Messaging Modular Input")){
+			System.exit(2);
+		}
+		
 		if (!isDisabled(stanzaName)) {
 			MessageReceiver mr = new MessageReceiver(stanzaName, queueName,
 					host, port, username, password, virtualHost, useSsl,
@@ -455,6 +463,14 @@ public class AMQPModularInput extends ModularInput {
 
 		endpoint.addArg(arg);
 
+		arg = new Arg();
+		arg.setName("activation_key");
+		arg.setTitle("Activation Key");
+		arg.setDescription("Visit http://www.baboonbones.com/#activation  to obtain a free,non-expiring key");
+		arg.setRequired_on_create(true);
+		arg.setRequired_on_edit(true);
+		endpoint.addArg(arg);
+		
 		arg = new Arg();
 		arg.setName("queue_name");
 		arg.setTitle("Queue Name");

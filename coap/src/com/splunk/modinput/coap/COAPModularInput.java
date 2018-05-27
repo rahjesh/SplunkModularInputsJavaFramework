@@ -85,6 +85,7 @@ public class COAPModularInput extends ModularInput {
 		String pollingType = "GET"; // default
 		String requestType = "CON"; // default
 		int negotiationBlockSize = 0; // default
+		String activationKey = "";
 
 		Transport transport = getTransportInstance(params,stanzaName);
 		
@@ -94,7 +95,10 @@ public class COAPModularInput extends ModularInput {
 				continue;
 			}
 
-			if (param.getName().equals("uri")) {
+			if (param.getName().equals("activation_key")) {
+				activationKey = param.getValue();
+			} 
+			else if (param.getName().equals("uri")) {
 				uri = param.getValue();
 			} else if (param.getName().equals("polling_type")) {
 				pollingType = param.getValue();
@@ -126,6 +130,10 @@ public class COAPModularInput extends ModularInput {
 				setJVMSystemProperties(param.getValue());
 			}
 
+		}
+		
+		if(!activationKeyCheck(activationKey,"COAP Modular Input")){
+			System.exit(2);
 		}
 
 		if (!isDisabled(stanzaName)) {
@@ -423,6 +431,14 @@ public class COAPModularInput extends ModularInput {
 		arg.setTitle("Stanza Name");
 		arg.setDescription("");
 
+		endpoint.addArg(arg);
+		
+		arg = new Arg();
+		arg.setName("activation_key");
+		arg.setTitle("Activation Key");
+		arg.setDescription("Visit http://www.baboonbones.com/#activation  to obtain a free,non-expiring key");
+		arg.setRequired_on_create(true);
+		arg.setRequired_on_edit(true);
 		endpoint.addArg(arg);
 
 		arg = new Arg();

@@ -1,4 +1,4 @@
-## Protocol Data Inputs v1.3
+## Protocol Data Inputs v1.5
 
 ## Overview
 
@@ -123,6 +123,10 @@ However you can bypass this if you wish and declare that data is output to a Spl
 * Untar the release to your $SPLUNK_HOME/etc/apps directory
 * Restart Splunk
 
+## Activation Key
+
+You require an activation key to use this App. Visit http://www.baboonbones.com/#activation  to obtain a free,non-expiring key
+
 ## Configuration
 
 As this is a Modular Input , you can then configure your Protocol inputs via Manager->Data Inputs->Protocol Data Inputs 
@@ -155,5 +159,5 @@ Note : these JVM System Properties will apply to the entire JVM context and all 
 
 ## Contact
 
-This project was initiated by Damien Dallimore , ddallimore@splunk.com
+This project was initiated by Damien Dallimore , damien@baboonbones.com
 

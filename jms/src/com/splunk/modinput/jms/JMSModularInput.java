@@ -133,6 +133,7 @@ public class JMSModularInput extends ModularInput {
 		String userJNDIProperties = "";
 		String messageHandlerImpl = DEFAULT_MESSAGE_HANDLER;
 		String messageHandlerParams = "";
+		String activationKey = "";
 
 		Transport transport = getTransportInstance(params,stanzaName);
 		
@@ -142,7 +143,10 @@ public class JMSModularInput extends ModularInput {
 				continue;
 			}
 
-			if (param.getName().equals("jndi_provider_url")) {
+			if (param.getName().equals("activation_key")) {
+				activationKey = param.getValue();
+			} 
+			else if (param.getName().equals("jndi_provider_url")) {
 				jndiURL = param.getValue();
 			} else if (param.getName().equals("jndi_initialcontext_factory")) {
 				jndiContextFactory = param.getValue();
@@ -235,6 +239,11 @@ public class JMSModularInput extends ModularInput {
 
 		}
 
+		if(!activationKeyCheck(activationKey,"JMS Messaging Modular Input")){
+			System.exit(2);
+		}
+		
+		
 		if (!isDisabled(stanzaName)) {
 			MessageReceiver mr = new MessageReceiver(stanzaName, destination,
 					jndiURL, jndiContextFactory, jndiUser, jndiPass,
@@ -736,6 +745,14 @@ public class JMSModularInput extends ModularInput {
 		arg.setDescription("Enter the name precisely in this format : topic/mytopic or queue/myqueue. If you have the same destination name on multiple servers, you can also prefix the destination name with the messaging server name using a ':' seperator ie: queue/server1:somequeue , queue/server2:somequeue");
 
 		endpoint.addArg(arg);
+		
+		arg = new Arg();
+		arg.setName("activation_key");
+		arg.setTitle("Activation Key");
+		arg.setDescription("Visit http://www.baboonbones.com/#activation  to obtain a free,non-expiring key");
+		arg.setRequired_on_create(true);
+		arg.setRequired_on_edit(true);
+		endpoint.addArg(arg);
 
 		arg = new Arg();
 		arg.setName("jndi_initialcontext_factory");
@@ -745,7 +762,6 @@ public class JMSModularInput extends ModularInput {
 		endpoint.addArg(arg);
 		
 		
-
 		arg = new Arg();
 		arg.setName("jndi_provider_url");
 		arg.setTitle("JNDI Provider URL");

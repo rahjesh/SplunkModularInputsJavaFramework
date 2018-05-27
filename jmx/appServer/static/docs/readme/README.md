@@ -1,8 +1,8 @@
 ## Monitoring of Java Virtual Machines with JMX
 
-* Version : 2.4
-* Date : November 2015
-* Author : Damien Dallimore, ddallimore@splunk.com
+* Version : 2.5
+* Date : May 2018
+* Author : Damien Dallimore, damien@baboonbones.com
 
 ## Overview
 
@@ -41,6 +41,10 @@ Currently supports the following  JMX Connectors :
 * Optionally set your JAVA_HOME environment variable to the root directory of you JRE installation.If you don't set this , the input will look for a default installed java executable on the path.
 * Untar the release to your $SPLUNK_HOME/etc/apps directory
 * Restart Splunk
+
+## Activation Key
+
+You require an activation key to use this App. Visit http://www.baboonbones.com/#activation  to obtain a free,non-expiring key
 
 ## Configuration
 

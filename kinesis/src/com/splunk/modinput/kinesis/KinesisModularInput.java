@@ -104,6 +104,8 @@ public class KinesisModularInput extends ModularInput {
 
 		String messageHandlerImpl = DEFAULT_MESSAGE_HANDLER;
 		String messageHandlerParams = "";
+		
+		String activationKey = "";
 
 		Transport transport = getTransportInstance(params, stanzaName);
 
@@ -113,7 +115,10 @@ public class KinesisModularInput extends ModularInput {
 				continue;
 			}
 
-			if (param.getName().equals("app_name")) {
+			if (param.getName().equals("activation_key")) {
+				activationKey = param.getValue();
+			} 
+			else if (param.getName().equals("app_name")) {
 				appName = param.getValue();
 			} else if (param.getName().equals("stream_name")) {
 				streamName = param.getValue();
@@ -153,6 +158,10 @@ public class KinesisModularInput extends ModularInput {
 				setJVMSystemProperties(param.getValue());
 			}
 
+		}
+		
+		if(!activationKeyCheck(activationKey,"Amazon Kinesis Modular Input")){
+			System.exit(2);
 		}
 
 		if (!isDisabled(stanzaName)) {
@@ -433,6 +442,14 @@ public class KinesisModularInput extends ModularInput {
 
 		endpoint.addArg(arg);
 
+		arg = new Arg();
+		arg.setName("activation_key");
+		arg.setTitle("Activation Key");
+		arg.setDescription("Visit http://www.baboonbones.com/#activation  to obtain a free,non-expiring key");
+		arg.setRequired_on_create(true);
+		arg.setRequired_on_edit(true);
+		endpoint.addArg(arg);
+		
 		arg = new Arg();
 		arg.setName("app_name");
 		arg.setTitle("Kinesis App Name");

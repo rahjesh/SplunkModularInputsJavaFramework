@@ -5,12 +5,14 @@ import java.io.StringReader;
 import java.io.StringWriter;
 import java.io.Writer;
 import java.net.Socket;
+import java.security.MessageDigest;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.StringTokenizer;
 
+import javax.xml.bind.DatatypeConverter;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
@@ -223,6 +225,30 @@ public abstract class ModularInput {
 
 	}
 
+	protected boolean activationKeyCheck(String activationKey, String toHash) {
+
+		try {
+			
+			byte[] activationBytes = DatatypeConverter.parseHexBinary(activationKey);
+
+			MessageDigest md = MessageDigest.getInstance("MD5");
+
+			byte[] thedigest = md.digest(toHash.getBytes());
+
+			if (!MessageDigest.isEqual(thedigest, activationBytes)) {
+				logger.error("Activation key check failed");
+				return false;
+			} else {
+				logger.info("Activation key check passed");
+				return true;
+			}
+		} catch (Throwable t) {
+			logger.error("Error performing activation key check : " + t.getMessage());
+			return false;
+		}
+
+	}
+	
 	protected void init(String[] args) {
 
 		String loggingLevel = System.getProperty("splunk.logging.level",

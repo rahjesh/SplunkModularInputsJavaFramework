@@ -1,4 +1,4 @@
-## Talk to Splunk with Amazon Alexa v0.8
+## Talk to Splunk with Amazon Alexa v1.0
 
 ## Overview
 
@@ -43,6 +43,10 @@ Your internet accessible Splunk instance needs to be your own hosted Splunk inst
 
 * Untar the release to your `$SPLUNK_HOME/etc/apps` directory
 * Restart Splunk
+
+## Activation Key
+
+You require an activation key to use this App. Visit http://www.baboonbones.com/#activation  to obtain a free,non-expiring key
 
 ## Generate Your Crypto Assets
 

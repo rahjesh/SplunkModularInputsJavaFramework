@@ -19,7 +19,7 @@ This project was initiated by Damien Dallimore
 
 <tr>
 <td><em>Email</em></td>
-<td>ddallimore@splunk.com</td>
+<td>damien@baboonbones.com</td>
 </tr>
 
 <tr>
