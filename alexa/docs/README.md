@@ -27,6 +27,8 @@ and then simply converse with your data like how you would talk to another perso
 
 [Video of this app in action with a Dot device](https://www.youtube.com/watch?v=pld8YWGR3Ak)
 
+[Advanced usage example with complex SPL and Predictive Analytics](https://www.youtube.com/watch?v=d3PUfuigBKU)
+
 ## Dependencies
 
 * Internet accessible Splunk version 5+ instance with a resolvable domain name.
@@ -37,7 +39,7 @@ and then simply converse with your data like how you would talk to another perso
 
 ## Note on Splunk Cloud
 
-Your internet accessible Splunk instance needs to be your own hosted Splunk instance on premise or perhaps in the cloud using a Splunk AMI. This App will not currently work in Splunk Cloud, but should in the next version when a Configuration UI is completed so you don't need to edit config files on the filesystem.
+Your internet accessible Splunk instance needs to be your own hosted Splunk instance on premise or perhaps in the cloud using a Splunk AMI. This App will not currently work in Splunk Cloud, but should in the next version when a Configuration UI is completed so you don't need to edit config files on the filesystem directly(Which requires SSH access that is not available at the time of writing this).
 
 ## Setup
 
@@ -79,7 +81,7 @@ requests for the HTTPs port 443.
 
 The means by which you interface your Alexa device(Echo/Tap/Dot) to Splunk is by registering a custom Alexa Skill with the AWS Alexa Cloud Service.
 
-This App is a web service based implementation of a custom Alexa Skill you can register.
+This App is a web service based implementation of a custom Alexa Skill you can register (it does NOT use AWS Lambdas).
 
 As we want this custom skill to be private and secure to your own usage , you are going to be 
 registering the skill under your own free Developer account.This is in essence 100% functionally equivalent to
@@ -89,6 +91,13 @@ Because this is not a publicly published skill , we don't need to worry about [i
 as this skill will be private to your own Alexa device.
 
 ![alt text](https://github.com/damiendallimore/SplunkModularInputsJavaFramework/blob/master/alexa/docs/arch.png)
+
+## Using Alexa for Business to host this skill privately
+
+**1 Dec 2017 UPDATE**
+
+The recently announced [Alexa for Business](https://aws.amazon.com/alexaforbusiness/) offering now allows you to run this skill **PRIVATELY** so you don't have to use the above workaround by way of deploying the skill under your personal development account. Everything you need to know can be found in the [Alexa docs here](https://aws.amazon.com/alexaforbusiness/faqs/).
+
 
 ### Let's get started
 
@@ -391,7 +400,8 @@ You can ignore any SLF4J errors
 
 ## Support
 
-This is a community supported App.For any issues please post your question to [answers.splunk.com](http://answers.splunk.com) and tag the question with the App name.The author will be notified with an email alert.
+This app is open source and entirely free to use as you wish.
+[BaboonBones.com](http://www.baboonbones.com#support) offer commercial support for implementing and any questions pertaining to this App.
 
 ## Source Code
 

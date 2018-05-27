@@ -1,9 +1,5 @@
 ## Splunk Java Modular Inputs v1.0
 
-# IMPORTANT NOTE :
-
-Although this framework is fully functional and stable, since it was released Splunk have now created their own Java Modular Inputs librarys.
-So I recommend that you use the formally Splunk developed and supported offering that can be found here : http://dev.splunk.com/view/java-sdk/SP-CAAAER2
 
 ## Overview
 
