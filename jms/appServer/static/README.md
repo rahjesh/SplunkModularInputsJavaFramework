@@ -83,18 +83,4 @@ If you require a larger heap, then you can alter this in $SPLUNK_HOME/etc/apps/j
 
 ## Contact
 
-This project was initiated by Damien Dallimore
-<table>
-
-<tr>
-<td><em>Email</em></td>
-<td>damien@baboonbones.com</td>
-</tr>
-
-<tr>
-<td><em>Twitter</em>
-<td>@damiendallimore</td>
-</tr>
-
-
-</table>
+www.baboonbones.com
