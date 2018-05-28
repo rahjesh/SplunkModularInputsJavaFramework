@@ -1,8 +1,8 @@
 1.0
 -----
-Added an activation key requirement , visit http://www.baboonbones.com/#activation  to obtain a free,non-expiring key
-Docs updated
-Splunk 7.1 compatible
+* Added an activation key requirement , visit http://www.baboonbones.com/#activation  to obtain a free,non-expiring key
+* Docs updated
+* Splunk 7.1 compatible
 
 0.8
 ----
