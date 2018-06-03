@@ -1,4 +1,4 @@
-## Splunk COAP (Constrained Application Protocol) Modular Input v0.8
+## Splunk COAP (Constrained Application Protocol) Modular Input v0.9
 
 ## Overview
 

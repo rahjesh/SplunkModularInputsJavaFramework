@@ -1,3 +1,7 @@
+1.5.1
+-----
+* minor manager xml ui tweak for 7.1
+
 1.5
 -----
 * Added an activation key requirement , visit http://www.baboonbones.com/#activation  to obtain a free,non-expiring key
