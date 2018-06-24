@@ -24,7 +24,7 @@ Furthermore , this Modular Input also implements several other protocols for sen
 
 ## Implementation
 
-This Modular Input utilizes VERTX.IO version 2.1.4 under the hood.http://vertx.io/manual.html#what-is-vertx.
+This Modular Input utilizes VERTX.IO version 2.1.4 under the hood.http://vertx.io/vertx2/manual.html#what-is-vertx.
 
 This framework provides for an implementation that is :
 
@@ -48,9 +48,9 @@ This allows you to :
 * enforce CIM compliance on the data you feed into the Splunk indexing pipeline
 * basically do anything programmatic to the raw byte data you want
 
-To do this you code a Vertx "Verticle" to handle the received data. http://vertx.io/manual.html#verticle
+To do this you code a Vertx "Verticle" to handle the received data. http://vertx.io/vertx2/manual.html#verticle
 
-These data handlers can be written in numerous JVM languages. http://vertx.io/manual.html#polyglot
+These data handlers can be written in numerous JVM languages. http://vertx.io/vertx2/manual.html#polyglot
 
 You then place the handler in the $SPLUNK_HOME/etc/apps/protocol_ta/bin/datahandlers directory.
 
@@ -79,7 +79,7 @@ Note : experimental Nashorn support is included for js and coffee (requires Java
 
 This is provisioned using your own Java Keystore that you can create using the keytool utility that is part of the JDK.
 
-Refer to http://vertx.io/core_manual_java.html#ssl-servers
+Refer to http://vertx.io/vertx2/core_manual_java.html#ssl-servers
 
 ## Authentication
 
@@ -99,11 +99,11 @@ But there are some other parameters that you can tune to take more advantage of 
 
 These are the "server_verticle_instances" and "handler_verticle_instances" params.
 
-Refer to http://vertx.io/core_manual_java.html#specifying-number-of-instances for an explanation of how increasing the number of instances may help you.
+Refer to http://vertx.io/vertx2/core_manual_java.html#specifying-number-of-instances for an explanation of how increasing the number of instances may help you.
 
 You can also tune the TCP accept queue settings (also requires OS tweaks) , particularly if you are receiving lots of connections within a short time span.
 
-Refer to http://vertx.io/manual.html#improving-connection-time
+Refer to http://vertx.io/vertx2/manual.html#improving-connection-time
 
 ## Data Output
 
@@ -131,8 +131,6 @@ You require an activation key to use this App. Visit http://www.baboonbones.com/
 
 As this is a Modular Input , you can then configure your Protocol inputs via Manager->Data Inputs->Protocol Data Inputs 
 
-
-
 ## Logging
 
 Any log entries/errors will get written to $SPLUNK_HOME/var/log/splunk/splunkd.log
@@ -147,7 +145,6 @@ If you require a larger heap, then you can alter this in $SPLUNK_HOME/etc/apps/p
 You can declare custom JVM System Properties when setting up new input stanzas.
 Note : these JVM System Properties will apply to the entire JVM context and all stanzas you have setup
 
-
 ## Troubleshooting
 
 * JAVA_HOME environment variable is set or "java" is on the PATH for the user's environment you are running Splunk as
@@ -160,4 +157,3 @@ Note : these JVM System Properties will apply to the entire JVM context and all 
 ## Contact
 
 This project was initiated by Damien Dallimore , damien@baboonbones.com
-
