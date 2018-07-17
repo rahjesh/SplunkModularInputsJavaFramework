@@ -6,7 +6,7 @@ import java.util.Map;
 /**
  * POJO for Formatter config
  * 
- * @author Damien Dallimore damien@dtdsoftware.com
+ * @author Damien Dallimore damien@baboonbones.com
  * 
  */
 public class Formatter extends ParameterizedConfig {

@@ -11,7 +11,7 @@ import java.util.regex.Pattern;
  * <pre>
  * Utility methods for formatting
  * </pre>
- * @author Damien Dallimore damien@dtdsoftware.com
+ * @author Damien Dallimore damien@baboonbones.com
  * 
  */
 public abstract class FormatterUtils {

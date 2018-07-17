@@ -12,7 +12,7 @@ import java.util.List;
  * .com/javase/1,5.0/docs/api/javax/management/ObjectName.html
  * 
  * 
- * @author Damien Dallimore damien@dtdsoftware.com
+ * @author Damien Dallimore damien@baboonbones.com
  * 
  */
 public class MBean {

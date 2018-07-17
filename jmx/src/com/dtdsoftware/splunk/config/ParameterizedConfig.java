@@ -5,7 +5,7 @@ import java.util.Map;
 /**
  * Superclass for config POJOs that take parameters
  * 
- * @author Damien Dallimore damien@dtdsoftware.com
+ * @author Damien Dallimore damien@baboonbones.com
  * 
  */
 public class ParameterizedConfig {

@@ -7,7 +7,7 @@ import java.util.StringTokenizer;
 /**
  * POJO for an MBean attribute
  * 
- * @author Damien Dallimore damien@dtdsoftware.com
+ * @author Damien Dallimore damien@baboonbones.com
  * 
  */
 public class Attribute {

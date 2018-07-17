@@ -32,7 +32,7 @@ import java.util.Date;
  *      Logging Best Practices</a>
  * 
  * 
- * @author Damien Dallimore damien@dtdsoftware.com
+ * @author Damien Dallimore damien@baboonbones.com
  * 
  */
 public class SplunkLogEvent {

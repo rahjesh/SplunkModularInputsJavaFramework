@@ -14,7 +14,7 @@ import org.apache.log4j.Logger;
 /**
  * POJO for a JMX Server
  * 
- * @author Damien Dallimore damien@dtdsoftware.com
+ * @author Damien Dallimore damien@baboonbones.com
  * 
  */
 public class JMXServer {

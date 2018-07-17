@@ -7,7 +7,7 @@ import java.util.Map;
 /**
  * Root config POJO
  * 
- * @author Damien Dallimore damien@dtdsoftware.com
+ * @author Damien Dallimore damien@baboonbones.com
  * 
  */
 public class JMXPoller {

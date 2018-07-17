@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * POJO for a cluster of JMX Servers
  * 
- * @author Damien Dallimore damien@dtdsoftware.com
+ * @author Damien Dallimore damien@baboonbones.com
  * 
  */
 public class Cluster {

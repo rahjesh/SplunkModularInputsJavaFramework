@@ -10,7 +10,7 @@ import org.apache.log4j.Logger;
 /**
  * POJO for an MBean operation
  * 
- * @author Damien Dallimore damien@dtdsoftware.com
+ * @author Damien Dallimore damien@baboonbones.com
  * 
  */
 public class Operation {

@@ -12,7 +12,7 @@ import java.util.TreeMap;
  * Custom formatter implementation that outputs the mbean canonical name as
  * split up tokens
  * </pre>
- * @author Damien Dallimore damien@dtdsoftware.com
+ * @author Damien Dallimore damien@baboonbones.com
  * 
  */
 public class TokenizedMBeanNameFormatter extends SplunkFormatter implements

@@ -7,7 +7,7 @@ import java.util.Set;
  * <pre>
  * Default formatter implementation
  * </pre>
- * @author Damien Dallimore damien@dtdsoftware.com
+ * @author Damien Dallimore damien@baboonbones.com
  * 
  */
 public class DefaultFormatter extends SplunkFormatter implements Formatter {

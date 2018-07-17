@@ -9,7 +9,7 @@ import java.util.Map;
  * The custom implementation class can then be placed on the classpath and
  * declared in the configuration xml file.
  * </pre>
- * @author Damien Dallimore damien@dtdsoftware.com
+ * @author Damien Dallimore damien@baboonbones.com
  * 
  */
 public interface Formatter {

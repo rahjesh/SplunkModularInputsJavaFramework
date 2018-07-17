@@ -3,7 +3,7 @@ package com.dtdsoftware.splunk.config;
 /**
  * POJO for an MBean operation parameter
  * 
- * @author Damien Dallimore damien@dtdsoftware.com
+ * @author Damien Dallimore damien@baboonbones.com
  * 
  */
 public class Parameter {
