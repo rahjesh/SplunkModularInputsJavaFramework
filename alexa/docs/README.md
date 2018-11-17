@@ -179,7 +179,7 @@ There are 2 parts to training up your vocabulary :
   
 For convenience you can keep a copy of your utterances,slots and intent schema in the `SPLUNK_HOME/etc/apps/alexa/alexa_assets` directory.
 
-###Configuring mapping.json
+### Configuring mapping.json
 
 This JSON file is the heart of the training model. It is where you define the mapping of the incoming intent to some action to perform.
 
@@ -192,13 +192,13 @@ The actions that you can perform are :
 *  Return an MP3 soundbite
 *  Execute a dynamic action that you have coded and plugged in and return a response (text or SSML)
 
-###Global Search Variables
+### Global Search Variables
 
 *  **global_search_earliest** : a default Splunk time modifier for all searches
 *  **global_search_latest** : a default Splunk time modifier for all searches
 *  **global_search_appnamespace** : a default app context for all searches to be run in
 
-###Global Authentication Variables
+### Global Authentication Variables
 
 By default , the Alexa App will connect to Splunk using the "splunk-system-user".
 However you can override this if you want to authenticate with another user.
@@ -206,7 +206,7 @@ However you can override this if you want to authenticate with another user.
 *  **global_auth_user** : username
 *  **global_auth_pass** : cleartext password. If you omit this , then the Alexa App will attempt to find an encrypted password that you can setup by navigating to Manage Apps -> Talk to Splunk with Amazon Alexa -> Set up
 
-###Search actions
+### Search actions
 
 *  **intent** : the name of the incoming request intent to map this action to
 *  **search** : the SPL search string to execute. This can also be tokenised with the name of a slot key passed in with the intent
@@ -219,7 +219,7 @@ However you can override this if you want to authenticate with another user.
 *  **appnamespace** : an app context to run the search in that would override any global setting
 *  **response** : the response to return back to Alexa. See more below on response formatting
 
-###Saved Search actions
+### Saved Search actions
 
 *  **intent** : the name of the incoming request intent to map this action to
 *  **saved_search_name** : the name of the saved search
@@ -233,7 +233,7 @@ However you can override this if you want to authenticate with another user.
 *  **appnamespace** : an app context to run the search in that would override any global setting
 *  **response** : the response to return back to Alexa. See more below on response formatting
 
-###Search tips
+### Search tips
 
 It is a good idea to try and optimize your searches for the Alexa voice environment.
 
@@ -242,12 +242,12 @@ It is a good idea to try and optimize your searches for the Alexa voice environm
 
 
 
-###Static response actions
+### Static response actions
 
 *  **intent** : the name of the incoming request intent to map this action to
 *  **response** : the response to return back to Alexa. See more below on response formatting
 
-###Create your own dynamic actions
+### Create your own dynamic actions
 
 You can easily extend the available set of built in actions by creating your own custom dynamic actions and plugging them in , all you need is some simple Java coding skills.
 
@@ -276,7 +276,7 @@ from within your code also.
   *  **response** : the response to return back to Alexa. See more below on response formatting
 
 
-###Response formatting
+### Response formatting
 
 The JSON `response` field in `mapping.json` can be in plain text or [SSML](https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/speech-synthesis-markup-language-ssml-reference).
 
@@ -294,7 +294,7 @@ Response Examples :
 *  SSML response : `<speak> Hello there </speak>`
 *  Dynamic action response : `My dynamic response is $dynamic_response$`
 
-###Configuring timemappings.json
+### Configuring timemappings.json
 
 When you are communicating with your Alexa device you are going to use simple noun phrases to express time periods.So we need a way of mapping these human spoken times to Splunk time patterns.
 
@@ -318,7 +318,7 @@ Then in your search and saved search actions in `mapping.json` you can simply re
 
 You can also completely omit any TIME_PERIOD slot in you utterances if you want , and the default time range values will then be determined from what you have configured in your mapping.json file.
 
-###Soundbites
+### Soundbites
 
 You can include MP3 soundbites in your response by embedding the URL of an MP3 file in an SSML formatted response.
 *  `<speak>Splunk sounds like <audio src=\"https://www.myhost.com/soundbites/horse.mp3\"/></speak>`
