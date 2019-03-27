@@ -1,10 +1,14 @@
+1.3
+-----
+* docs updated
+
 1.2
 -----
 * minor manager xml ui tweak for 7.1
 
 1.1
 -----
-* Added an activation key requirement , visit http://www.baboonbones.com/#activation  to obtain a free,non-expiring key
+* Added an activation key requirement , visit http://www.baboonbones.com/#activation  to obtain a non-expiring key
 * Docs updated
 * Splunk 7.1 compatible
 

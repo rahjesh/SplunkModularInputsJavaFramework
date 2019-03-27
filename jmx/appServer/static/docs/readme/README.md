@@ -1,7 +1,7 @@
 ## Monitoring of Java Virtual Machines with JMX
 
-* Version : 2.5
-* Date : May 2018
+* Version : 2.6
+* Date : March 2019
 * Author : Damien Dallimore, damien@baboonbones.com
 
 ## Overview
@@ -44,7 +44,7 @@ Currently supports the following  JMX Connectors :
 
 ## Activation Key
 
-You require an activation key to use this App. Visit http://www.baboonbones.com/#activation  to obtain a free,non-expiring key
+You require an activation key to use this App. Visit http://www.baboonbones.com/#activation  to obtain a non-expiring key
 
 ## Configuration
 

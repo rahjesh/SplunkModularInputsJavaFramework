@@ -20,7 +20,7 @@
           <view name="list"/>
           <view name="create"/>
           <view name="edit"/>
-          <key name="exampleText">Visit &lt;a href="http://www.baboonbones.com/#activation" target="_blank"&gt;http://www.baboonbones.com/#activation&lt;/a&gt; to obtain a free,non-expiring key</key>
+          <key name="exampleText">Visit &lt;a href="http://www.baboonbones.com/#activation" target="_blank"&gt;http://www.baboonbones.com/#activation&lt;/a&gt; to obtain a non-expiring key</key>
         </element>
         
         <element name="output_settings" type="fieldset">

@@ -1,4 +1,4 @@
-## Splunk Kafka Messaging Modular Input v1.2
+## Splunk Kafka Messaging Modular Input v1.3
 
 ## Overview
 
@@ -24,7 +24,7 @@ https://kafka.apache.org/
 
 ## Activation Key
 
-You require an activation key to use this App. Visit http://www.baboonbones.com/#activation  to obtain a free,non-expiring key
+You require an activation key to use this App. Visit http://www.baboonbones.com/#activation  to obtain a non-expiring key
 
 ## Configuration
 

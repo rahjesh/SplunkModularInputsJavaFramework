@@ -1,4 +1,4 @@
-## Splunk MQTT Modular Input v1.1
+## Splunk MQTT Modular Input v1.2
 
 ## Overview
 
@@ -26,7 +26,7 @@ This Modular Input utilizes the PAHO Java client library version 0.4.0 , http://
 
 ## Activation Key
 
-You require an activation key to use this App. Visit http://www.baboonbones.com/#activation  to obtain a free,non-expiring key
+You require an activation key to use this App. Visit http://www.baboonbones.com/#activation  to obtain a non-expiring key
 
 ## Configuration
 

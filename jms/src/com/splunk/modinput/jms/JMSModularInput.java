@@ -749,7 +749,7 @@ public class JMSModularInput extends ModularInput {
 		arg = new Arg();
 		arg.setName("activation_key");
 		arg.setTitle("Activation Key");
-		arg.setDescription("Visit http://www.baboonbones.com/#activation  to obtain a free,non-expiring key");
+		arg.setDescription("Visit http://www.baboonbones.com/#activation  to obtain a non-expiring key");
 		arg.setRequired_on_create(true);
 		arg.setRequired_on_edit(true);
 		endpoint.addArg(arg);

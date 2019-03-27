@@ -1,4 +1,4 @@
-## Splunk JMS Modular Input v1.6.1
+## Splunk JMS Modular Input v1.7
 
 ## Overview
 
@@ -30,7 +30,7 @@ You can then supply messaging provider specific jar files at runtime.
 
 ## Activation Key
 
-You require an activation key to use this App. Visit http://www.baboonbones.com/#activation  to obtain a free,non-expiring key
+You require an activation key to use this App. Visit http://www.baboonbones.com/#activation  to obtain a non-expiring key
 
 ## Configuration
 

@@ -1,6 +1,6 @@
 [kinesis://name]
 
-# You require an activation key to use this App. Visit http://www.baboonbones.com/#activation  to obtain a free,non-expiring key
+# You require an activation key to use this App. Visit http://www.baboonbones.com/#activation  to obtain a non-expiring key
 activation_key = <value>
 
 #connection settings

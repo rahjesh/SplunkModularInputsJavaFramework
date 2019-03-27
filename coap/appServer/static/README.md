@@ -1,4 +1,4 @@
-## Splunk COAP (Constrained Application Protocol) Modular Input v0.9
+## Splunk COAP (Constrained Application Protocol) Modular Input v1.0
 
 ## Overview
 
@@ -30,7 +30,7 @@ This Modular Input utilizes the Californium Java client library version 1.0 , ht
 
 ## Activation Key
 
-You require an activation key to use this App. Visit http://www.baboonbones.com/#activation  to obtain a free,non-expiring key
+You require an activation key to use this App. Visit http://www.baboonbones.com/#activation  to obtain a non-expiring key
 
 ## Configuration
 

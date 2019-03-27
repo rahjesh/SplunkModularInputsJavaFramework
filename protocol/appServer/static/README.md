@@ -1,4 +1,4 @@
-## Protocol Data Inputs v1.5.1
+## Protocol Data Inputs v1.6
 
 ## Overview
 
@@ -125,7 +125,7 @@ However you can bypass this if you wish and declare that data is output to a Spl
 
 ## Activation Key
 
-You require an activation key to use this App. Visit http://www.baboonbones.com/#activation  to obtain a free,non-expiring key
+You require an activation key to use this App. Visit http://www.baboonbones.com/#activation  to obtain a non-expiring key
 
 ## Configuration
 

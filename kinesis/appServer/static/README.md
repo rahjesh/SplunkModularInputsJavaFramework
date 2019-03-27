@@ -1,4 +1,4 @@
-## Splunk Amazon Kinesis Modular Input v1.2
+## Splunk Amazon Kinesis Modular Input v1.3
 
 ## Overview
 
@@ -22,7 +22,7 @@ http://aws.amazon.com/kinesis/
 
 ## Activation Key
 
-You require an activation key to use this App. Visit http://www.baboonbones.com/#activation  to obtain a free,non-expiring key
+You require an activation key to use this App. Visit http://www.baboonbones.com/#activation  to obtain a non-expiring key
 
 ## Configuration
 

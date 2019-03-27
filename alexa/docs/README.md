@@ -1,4 +1,4 @@
-## Talk to Splunk with Amazon Alexa v1.0
+## Talk to Splunk with Amazon Alexa v1.1
 
 ## Overview
 
@@ -48,7 +48,7 @@ Your internet accessible Splunk instance needs to be your own hosted Splunk inst
 
 ## Activation Key
 
-You require an activation key to use this App. Visit http://www.baboonbones.com/#activation  to obtain a free,non-expiring key
+You require an activation key to use this App. Visit http://www.baboonbones.com/#activation  to obtain a non-expiring key
 
 ## Generate Your Crypto Assets
 
@@ -400,7 +400,6 @@ You can ignore any SLF4J errors
 
 ## Support
 
-This app is open source and entirely free to use as you wish.
 [BaboonBones.com](http://www.baboonbones.com#support) offer commercial support for implementing and any questions pertaining to this App.
 
 ## Source Code
