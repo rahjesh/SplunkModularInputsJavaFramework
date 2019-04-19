@@ -1,4 +1,4 @@
-## Splunk AMQP Messaging Modular Input v1.3
+## Splunk AMQP Messaging Modular Input v1.3.1
 
 ## Overview
 

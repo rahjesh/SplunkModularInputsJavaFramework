@@ -1,4 +1,4 @@
-## Splunk MQTT Modular Input v1.2
+## Splunk MQTT Modular Input v1.2.1
 
 ## Overview
 

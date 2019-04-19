@@ -1,3 +1,7 @@
+1.2.1
+-----
+* added trial key functionality
+
 1.2
 -----
 * docs updated

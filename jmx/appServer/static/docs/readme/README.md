@@ -1,7 +1,7 @@
 ## Monitoring of Java Virtual Machines with JMX
 
-* Version : 2.6
-* Date : March 2019
+* Version : 2.6.1
+* Date : April 2019
 * Author : Damien Dallimore, damien@baboonbones.com
 
 ## Overview
