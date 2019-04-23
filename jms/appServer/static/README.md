@@ -1,4 +1,4 @@
-## Splunk JMS Modular Input v1.7.1
+## Splunk JMS Modular Input v1.7.2
 
 ## Overview
 
@@ -27,14 +27,14 @@ You can then supply messaging provider specific jar files at runtime.
 * Optionally set your JAVA_HOME environment variable to the root directory of you JRE installation.If you don't set this , the input will look for a default installed java executable on the path.
 * Untar the release to your $SPLUNK_HOME/etc/apps directory
 * Restart Splunk
+* If you are using a Splunk UI Browse to `Settings -> Data Inputs -> JMS Messaging` to add a new Input stanza via the UI
+* If you are not using a Splunk UI (ie: you are running on a Universal Forwarder) , you need to add a stanza to inputs.conf directly as per the specification in `README/inputs.conf.spec`. The `inputs.conf` file should be placed in a `local` directory under an App or User context.
+
 
 ## Activation Key
 
 You require an activation key to use this App. Visit http://www.baboonbones.com/#activation  to obtain a non-expiring key
 
-## Configuration
-
-As this is a modular input , you can then configure your JMS inputs via Manager->DataInputs
 
 ##JNDI vs Local mode
 
@@ -42,12 +42,15 @@ For the most part you will setup your JMS connectivity using JNDI to obtain the 
 However, you can bypass JNDI if you wish and use local instantiation.
 To this you must code an implementation of the com.splunk.modinput.jms.LocalJMSResourceFactory interface.
 You can then bundle the classes in a jar file and place them in $SPLUNK_HOME/etc/apps/jms_ta/bin/lib
-The configuration screen in Splunk Manager for creating a new JMS input allows you to choose local or jndi as the instantiation mode.
+The configuration screen for creating a new JMS input allows you to choose local or jndi as the instantiation mode.
 So choose local , and then you can specify the name of implementation class, as well as any declarative paramaters you want to pass in.
 
 ## Logging
 
 Any log entries/errors will get written to $SPLUNK_HOME/var/log/splunk/splunkd.log
+
+These are also searchable in Splunk : `index=_internal error jms.py`
+
 To turn on more verbose INFO level logging , set the logging level in the $SPLUNK_HOME/etc/apps/jms_ta/bin/jms.py script ie: ERROR , INFO
 
 ## Third party jars

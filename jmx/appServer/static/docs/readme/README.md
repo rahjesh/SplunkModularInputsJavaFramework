@@ -1,6 +1,6 @@
 ## Monitoring of Java Virtual Machines with JMX
 
-* Version : 2.6.1
+* Version : 2.6.2
 * Date : April 2019
 * Author : Damien Dallimore, damien@baboonbones.com
 
@@ -41,6 +41,9 @@ Currently supports the following  JMX Connectors :
 * Optionally set your JAVA_HOME environment variable to the root directory of you JRE installation.If you don't set this , the input will look for a default installed java executable on the path.
 * Untar the release to your $SPLUNK_HOME/etc/apps directory
 * Restart Splunk
+* If you are using a Splunk UI Browse to `Settings -> Data Inputs -> JMX (Java Management Extensions)` to add a new Input stanza via the UI
+* If you are not using a Splunk UI (ie: you are running on a Universal Forwarder) , you need to add a stanza to inputs.conf directly as per the specification in `README/inputs.conf.spec`. The `inputs.conf` file should be placed in a `local` directory under an App or User context.
+
 
 ## Activation Key
 
@@ -50,7 +53,7 @@ You require an activation key to use this App. Visit http://www.baboonbones.com/
 
 The data collection logic is implemented as a modular input.
 
-You can configure your JMX inputs via Manager->DataInputs->JMX
+You can configure your JMX inputs via `Settings -> Data Inputs -> JMX (Java Management Extensions)`
 
 You will need to configure your JMX config file, this is the config file where you specify JMX server(s), MBeans and MBean attributes/operations/notifications.
 You can create as many config files,with any name, as you want and place them in the SPLUNK4JMX/bin/config directory
@@ -255,6 +258,7 @@ Why would you want to do this ? Well perhaps you are targeting a JVM with some p
 
 Any runtime errors will get written to $SPLUNK_HOME/var/log/splunk/splunkd.log
 
+These are also searchable in Splunk : `index=_internal error jmx.py`
 
 ## Troubleshooting
 

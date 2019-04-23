@@ -1,4 +1,4 @@
-## Splunk Amazon Kinesis Modular Input v1.3.1
+## Splunk Amazon Kinesis Modular Input v1.3.2
 
 ## Overview
 
@@ -19,18 +19,20 @@ http://aws.amazon.com/kinesis/
 * Optionally set your JAVA_HOME environment variable to the root directory of your JRE installation.If you don't set this , the input will look for a default installed java executable on the path.
 * Untar the release to your $SPLUNK_HOME/etc/apps directory
 * Restart Splunk
+* If you are using a Splunk UI Browse to `Settings -> Data Inputs -> Amazon Kinesis` to add a new Input stanza via the UI
+* If you are not using a Splunk UI (ie: you are running on a Universal Forwarder) , you need to add a stanza to inputs.conf directly as per the specification in `README/inputs.conf.spec`. The `inputs.conf` file should be placed in a `local` directory under an App or User context.
+
 
 ## Activation Key
 
 You require an activation key to use this App. Visit http://www.baboonbones.com/#activation  to obtain a non-expiring key
 
-## Configuration
-
-As this is a Modular Input , you can then configure your Kinesis inputs via Manager->Data Inputs->Kinesis. 
 
 ## Logging
 
 Any log entries/errors will get written to $SPLUNK_HOME/var/log/splunk/splunkd.log
+
+These are also searchable in Splunk : `index=_internal error kinesis.py`
 
 ## JVM Heap Size
 

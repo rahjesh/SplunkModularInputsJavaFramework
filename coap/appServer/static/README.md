@@ -1,4 +1,4 @@
-## Splunk COAP (Constrained Application Protocol) Modular Input v1.1
+## Splunk COAP (Constrained Application Protocol) Modular Input v1.1.1
 
 ## Overview
 
@@ -27,18 +27,20 @@ This Modular Input utilizes the Californium Java client library version 1.0 , ht
 * Optionally set your JAVA_HOME environment variable to the root directory of your JRE installation.If you don't set this , the input will look for a default installed java executable on the path.
 * Untar the release to your $SPLUNK_HOME/etc/apps directory
 * Restart Splunk
+* If you are using a Splunk UI Browse to `Settings -> Data Inputs -> COAP` to add a new Input stanza via the UI
+* If you are not using a Splunk UI (ie: you are running on a Universal Forwarder) , you need to add a stanza to inputs.conf directly as per the specification in `README/inputs.conf.spec`. The `inputs.conf` file should be placed in a `local` directory under an App or User context.
+
 
 ## Activation Key
 
 You require an activation key to use this App. Visit http://www.baboonbones.com/#activation  to obtain a non-expiring key
 
-## Configuration
-
-As this is a Modular Input , you can then configure your COAP inputs via Manager->Data Inputs->COAP. 
 
 ## Logging
 
 Any log entries/errors will get written to $SPLUNK_HOME/var/log/splunk/splunkd.log
+
+These are also searchable in Splunk : `index=_internal error coap.py`
 
 ## JVM Heap Size
 
